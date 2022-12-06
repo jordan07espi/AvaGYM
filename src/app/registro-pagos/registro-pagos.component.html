@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Jquery 3.2.1  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap 3.3.7 JS  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function accion(accion,id){
+            $(document).ready(function () {
+                $('#accion-modal').html(accion);
+                $('#id-modal').html(id);
+                $('#botonUltimaAccion').removeClass('hidden');
+            })
+        }
+    </script>
+</head>
+<body>
+<body>
+<div class="container">
+    <h3>Registro de pagos</h3>
+    <table class="table table-bordered table-condensed table-hover">
+        <thead >
+        <tr>
+            <th class="active">Nombres</th>
+            <th class="active">Apellidos</th>
+            <th class="active">Telefono</th>
+            <th class="active">correo</th>
+            <th class="active">Estado de pago</th>
+            <th class="active">Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>0993171143</td>
+            <td>john@gmail.com</td>
+            <td>pagado</td>
+            <td><a onclick="accion('ver',1);" href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#myModalmostrar" role="button">aceptar</a> <a href="#" onclick="accion('editar',1)" class="btn btn-xs btn-danger " data-toggle="modal" data-target="#myModalmostrar" role="button">rechazar</a></td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>0993171143</td>
+            <td>john@gmail.com</td>
+            <td>por pagar</td>
+            <td><a onclick="accion('ver',2);" href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#myModalmostrar" role="button">aceptar</a> <a href="#" onclick="accion('editar',1)" class="btn btn-xs btn-danger " data-toggle="modal" data-target="#myModalmostrar" role="button">rechazar</a></td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>0993171143</td>
+            <td>john@gmail.com</td>
+            <td>pagado</td>
+            <td><a onclick="accion('ver',3);" href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#myModalmostrar" role="button">aceptar</a> <a href="#" onclick="accion('editar',1)" class="btn btn-xs btn-danger " data-toggle="modal" data-target="#myModalmostrar" role="button">rechazar</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" id="botonUltimaAccion" class="btn btn-primary hidden" data-toggle="modal" data-target="#myModalmostrar">Ultima accion</button>
+</div>
+<!-- modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalmostrar" >
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Info</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">Acción:</div>
+                        <div class="col-md-6">ID</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" id="accion-modal"></div>
+                        <div class="col-md-6" id="id-modal"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+</body>
+</html>

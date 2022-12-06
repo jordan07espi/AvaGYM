@@ -1,0 +1,25 @@
+<div class="mainContainer">  
+    <div class="content">
+        <div class="header">
+            <h1>SUBIR UN ARCHIVO</h1>
+        </div>
+        <div class="row margin25">
+  
+            <div class="col-md-4">
+  
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="custom-file">
+                        <form action="/api/upload" method="post" enctype="multipart/form-data">
+                            <input (change)="onFileSelected($event)"  type="file"  class="custom-file-input"> 
+                        </form><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+  
+            </div>
+        </div>
+    </div>
+  </div>
